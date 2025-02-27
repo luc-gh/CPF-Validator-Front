@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validador de CPF</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app-wrapper">
+    <header class="app-header">
+      <h1 class="app-title">Validador de CPF</h1>
+      <p class="app-info">
+        Digite um CPF e clique em "Validar CPF" para verificar se ele é válido ou falso.
+      </p>
+    </header>
+    
+    <section class="app-input">
+      <label for="txt_cpf" class="input-title">Digite o CPF:</label>
+      <input type="text" id="txt_cpf" maxlength="14" placeholder="000.000.000-00">
+    </section>
+    
+    <section class="app-buttons">
+      <button id="bt_validar_cpf" class="btn-cta">Validar CPF</button>
+    </section>
+    
+    <section class="app-output">
+      <label for="texto_resposta" class="output-title">Resposta:</label>
+      <textarea id="texto_resposta" readonly></textarea>
+    </section>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
