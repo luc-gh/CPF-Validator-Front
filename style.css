@@ -1,0 +1,99 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  color: #333;
+}
+
+#app-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.app-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.app-title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.app-info {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Input */
+.app-input {
+  margin-bottom: 20px;
+}
+
+.input-title {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.app-input input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Botões */
+.app-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn-cta {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-cta:hover {
+  background-color: #0056b3;
+}
+
+/* Área de resposta */
+.app-output {
+  margin-top: 20px;
+}
+
+.output-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.app-output textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  font-size: 1em;
+}
