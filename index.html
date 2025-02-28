@@ -11,13 +11,25 @@
     <header class="app-header">
       <h1 class="app-title">Validador de CPF</h1>
       <p class="app-info">
-        Digite um CPF e clique em "Validar CPF" para verificar se ele é válido ou falso.
+        Digite um CPF, selecione o protocolo (TCP ou UDP) e clique em "Validar CPF" para verificar se ele é válido ou falso.
       </p>
     </header>
     
     <section class="app-input">
       <label for="txt_cpf" class="input-title">Digite o CPF:</label>
       <input type="text" id="txt_cpf" maxlength="14" placeholder="000.000.000-00">
+    </section>
+    
+    <section class="app-protocol">
+      <p class="protocol-title">Selecione o protocolo:</p>
+      <label>
+        <input type="radio" name="protocol" value="tcp" checked>
+        TCP
+      </label>
+      <label>
+        <input type="radio" name="protocol" value="udp">
+        UDP
+      </label>
     </section>
     
     <section class="app-buttons">
