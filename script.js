@@ -1,7 +1,7 @@
 // Endpoint base da API (hipotético, padrão do deploy via DockerHub)
 // Exemplo: "https://seu-usuario-dockerhub.io/api"
 // Altere essa URL para a do seu backend após o deploy.
-const API_BASE_URL = "https://hub.docker.com/repository/docker/lcsdocker0/cpf-validator-back";
+const API_BASE_URL = "https://hub.docker.com/repository/docker/lcsdocker0/cpf-validator-back:1.2";
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("bt_validar_cpf").addEventListener("click", validarCPF);
