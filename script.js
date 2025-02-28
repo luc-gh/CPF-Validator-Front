@@ -1,13 +1,8 @@
-// Endpoint base da API (hipotético, padrão do deploy via DockerHub)
-// Exemplo: "https://seu-usuario-dockerhub.io/api"
-// Altere essa URL para a do seu backend após o deploy.
-const API_BASE_URL = "https://hub.docker.com/repository/docker/lcsdocker0/cpf-validator-back:1.2";
+const API_BASE_URL = "https://cpf-validator-back-1-2.onrender.com";
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("bt_validar_cpf").addEventListener("click", validarCPF);
-  
-  // Opcional: implementar máscara ou formatação para o CPF enquanto o usuário digita.
-});
+  });
 
 function validarCPF() {
   const cpf = document.getElementById("txt_cpf").value.trim();
@@ -17,7 +12,6 @@ function validarCPF() {
     return;
   }
   
-  // Chamada para o endpoint /validate da API
   fetch(`${API_BASE_URL}/validate?cpf=${encodeURIComponent(cpf)}`)
     .then(response => {
       if (!response.ok) {
