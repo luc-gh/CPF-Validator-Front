@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://cpf-validator-back-1-2.onrender.com/validate";
+const API_BASE_URL = "https://cpf-validator-back-1-2.onrender.com";
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("bt_validar_cpf").addEventListener("click", validarCPF);
