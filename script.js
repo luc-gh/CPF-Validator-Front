@@ -6,49 +6,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function validarCPF() {
   const cpf = document.getElementById("txt_cpf").value.trim();
-  
   if (cpf === "") {
     displayResponse("Por favor, insira um CPF.");
     return;
   }
-  
-  // Obtém o protocolo selecionado (TCP ou UDP)
+
   const protocolElements = document.getElementsByName("protocol");
-  let selectedProtocol = "tcp"; // padrão
+  let selectedProtocol = "tcp"; 
   for (const elem of protocolElements) {
     if (elem.checked) {
       selectedProtocol = elem.value;
       break;
     }
   }
-  
-  // Monta a URL com os parâmetros cpf e protocol
+
   const url = `${API_BASE_URL}/validate?cpf=${encodeURIComponent(cpf)}&protocol=${encodeURIComponent(selectedProtocol)}`;
-  
-  fetch(url)
+  console.log("Fazendo requisição para:", url);
+
+  fetch(url, { method: "GET", mode: "cors" })
     .then(response => {
+      console.log("Resposta HTTP recebida:", response.status);
       if (!response.ok) {
-        // Tenta extrair detalhes do erro da resposta JSON
         return response.json().then(errData => {
           throw new Error(errData.message || `Erro HTTP: ${response.status}`);
         }).catch(() => {
-          // Fallback caso a resposta não seja JSON
           throw new Error(`Erro HTTP: ${response.status}`);
         });
       }
       return response.json();
     })
     .then(data => {
-      // Considera que a API retorna um JSON com o campo "valid" e, opcionalmente, "reason"
-      if (data.valid) {
-        displayResponse("CPF Válido!");
-      } else {
-        let msg = "CPF Inválido!";
-        if (data.reason) {
-          msg += ` Motivo: ${data.reason}`;
-        }
-        displayResponse(msg);
-      }
+      console.log("Dados da API:", data);
+      const message = data.valid ? "CPF Válido!" : "CPF Inválido!";
+      displayResponse(message);
     })
     .catch(error => {
       console.error("Erro na chamada à API:", error);
@@ -58,4 +48,5 @@ function validarCPF() {
 
 function displayResponse(message) {
   document.getElementById("texto_resposta").value = message;
+  console.log("Mensagem exibida para o usuário:", message);
 }
