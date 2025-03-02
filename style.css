@@ -10,6 +10,13 @@ body {
   background-color: #f9f9f9;
   padding: 20px;
   color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilos para modo escuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 #app-wrapper {
@@ -19,6 +26,12 @@ body {
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode #app-wrapper {
+  background-color: #1e1e1e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Header */
@@ -35,6 +48,22 @@ body {
 .app-info {
   font-size: 0.9em;
   color: #666;
+}
+
+/* Botão de toggle para modo escuro */
+.btn-toggle {
+  margin-top: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-toggle:hover {
+  background-color: #555;
 }
 
 /* Input */
