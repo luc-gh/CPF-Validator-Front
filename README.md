@@ -8,8 +8,6 @@
 | Arnaldo Lucas Santos Duarte  | 22112370     |
 | Jockson Mateus da Silva Duarte    | 22112374     |
 
-## 📃 **Descrição do Projeto** 
-
 ## 📃 Descrição do Projeto
 
 O **Validador de CPF** é uma aplicação web desenvolvida para verificar a validade de um CPF utilizando um serviço externo. O usuário pode inserir um CPF, escolher entre os protocolos TCP ou UDP e obter uma resposta sobre a validade do documento.
